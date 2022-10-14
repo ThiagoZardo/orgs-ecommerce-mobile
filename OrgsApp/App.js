@@ -1,15 +1,15 @@
 import React from 'react';
 import { StatusBar, SafeAreaView, Text, View } from 'react-native';
-import Cesta from './src/screens/Cesta';
-import mock from './src/mocks/cesta';
+import Basket from './src/screens/Cesta';
+import mock from './src/mocks/basket';
 
 
 export default function App() {
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }} >
       <StatusBar />
-      <Cesta {...mock} />
+      <Basket {...mock} />
     </SafeAreaView>
   );
 }

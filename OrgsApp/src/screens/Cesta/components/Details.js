@@ -1,19 +1,28 @@
 import React from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import Button from './Button';
 
-const Details = ({ name, logoFarm, nameFarm, description, price }) => {
-
+const Details = ({
+  name,
+  logoFarm,
+  nameFarm,
+  description,
+  price,
+  buttonPurchase 
+}) => {
   return (
     <>
       <Text style={ styles.name }> { name } </Text>
 
       <View style={ styles.farm } >
         <Image source={ logoFarm } style={ styles.logoFarm } />
-        <Text style={ styles.nameFarm }> { nameFarm } </Text>
+        <Text style={ styles.nameFarm }>{ nameFarm }</Text>
       </View>
 
-      <Text style={ styles.description }> { description } </Text>
+      <Text style={ styles.description }>{ description }</Text>
       <Text style={ styles.price } >{ price }</Text>
+
+      <Button text={ buttonPurchase }/>
     </>
   )
 }
